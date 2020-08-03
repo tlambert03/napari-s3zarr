@@ -11,4 +11,4 @@ def napari_get_reader(path):
 
 
 def reader_function(path):
-    return [(da.from_zarr(path),)]
+    return [(da.from_zarr(path, storage_options={"anon": True}),)]
